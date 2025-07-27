@@ -43,7 +43,7 @@ const Auth = () => {
                 {/* if the user is already authenticated */}
                 {auth.isAuthenticated ? (
                   <button className="auth-button" onClick={auth.signOut}>
-                    <p>Log Out</p>
+                    <p>Log out</p>
                   </button>
                 ) : (
                   <button className="auth-button" onClick={auth.signIn}>
