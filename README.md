@@ -1,22 +1,36 @@
-# Welcome to React Router!
+# Resumind - AI Resume Analyzer
 
-A modern, production-ready template for building full-stack React applications using React Router.
+![Resumind Featured Image](public/readme-featured-image.png)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+A modern, production-ready AI-powered resume analyzer built with React Router and Puter.js. Resumind helps users optimize their resumes for ATS (Applicant Tracking Systems) and provides detailed feedback using Claude 3.7 Sonnet.
 
-## Features
+## 🚀 Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- **AI Analysis**: Powered by Claude 3.7 Sonnet via Puter AI.
+- **ATS Scoring**: Detailed ATS compatibility score and suggestions.
+- **Visual Feedback**: Real-time resume scanning animation and visual score badges.
+- **Cloud Storage**: Seamless integration with Puter.js for file and data storage.
+- **Modern Stack**: Built with React Router v7, Tailwind CSS v4, and TypeScript.
+- **Server-Side Rendering**: Optimized performance and SEO.
+- **Responsive Design**: Works perfectly across all device sizes.
 
-## Getting Started
+## 🛠️ Tech Stack
 
-### Installation
+- **Framework**: [React Router v7](https://reactrouter.com/)
+- **UI & Styling**: [Tailwind CSS v4](https://tailwindcss.com/), [Zustand](https://zustand.docs.pmnd.rs/), [Framer Motion](https://www.framer.com/motion/) (via tw-animate-css)
+- **Backend/AI Services**: [Puter.js](https://puter.com/) (Auth, FS, KV, AI)
+- **PDF Processing**: [pdf.js](https://mozilla.github.io/pdf.js/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+
+## 📋 Requirements
+
+- Node.js 20 or higher
+- npm (or pnpm/yarn)
+- A Puter.com account (for production storage and AI features)
+
+## 🏁 Getting Started
+
+### 1. Installation
 
 Install the dependencies:
 
@@ -24,7 +38,7 @@ Install the dependencies:
 npm install
 ```
 
-### Development
+### 2. Development
 
 Start the development server with HMR:
 
@@ -34,7 +48,7 @@ npm run dev
 
 Your application will be available at `http://localhost:5173`.
 
-## Building for Production
+### 3. Production Build
 
 Create a production build:
 
@@ -42,46 +56,56 @@ Create a production build:
 npm run build
 ```
 
-## Deployment
+To start the production server:
 
-### Docker Deployment
+```bash
+npm start
+```
+
+## 🐳 Docker Deployment
 
 To build and run using Docker:
 
 ```bash
-docker build -t my-app .
+docker build -t ai-resume-analyzer .
 
 # Run the container
-docker run -p 3000:3000 my-app
+docker run -p 3000:3000 ai-resume-analyzer
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
+## 📜 Available Scripts
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
+- `npm run dev`: Start development server.
+- `npm run build`: Build the application for production.
+- `npm run start`: Start the production server.
+- `npm run typecheck`: Run TypeScript type checking.
 
-### DIY Deployment
+## 📁 Project Structure
 
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
+```text
+├── app/
+│   ├── components/       # Reusable UI components (ATS, Summary, etc.)
+│   ├── lib/              # Puter.js initialization and utility functions
+│   ├── routes/           # Application pages and route handlers
+│   ├── root.tsx          # Main layout and Puter.js initialization
+│   ├── routes.ts         # Route definitions
+│   └── app.css           # Global styles and Tailwind configuration
+├── public/               # Static assets (images, icons, workers)
+├── constants/            # Project-wide constants
+├── types/                # TypeScript type definitions
+├── react-router.config.ts # React Router configuration
+└── vite.config.ts        # Vite configuration
 ```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
 
-## Styling
+## 🔐 Environment Variables
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+TODO: List any required environment variables here.
+Currently, the project relies on Puter.js's global script for authentication and services.
+
+## ⚖️ License
+
+TODO: Add license information (e.g., MIT, Apache 2.0).
 
 ---
 
-Built with ❤️ using React Router.
+Built with ❤️ using React Router and Puter.js.

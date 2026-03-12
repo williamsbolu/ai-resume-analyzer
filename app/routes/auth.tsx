@@ -17,7 +17,7 @@ const Auth = () => {
   const next = location.search.split("next=")[1];
   const navigate = useNavigate();
 
-  console.log({ next, search: location.search });
+  // console.log({ next, search: location.search });
 
   useEffect(() => {
     if (auth.isAuthenticated) {
